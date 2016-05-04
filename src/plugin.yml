@@ -1,0 +1,35 @@
+name: DragonAttack
+main: com.mbach231.dragonattack.DragonAttack
+version: 1.1
+commands:
+  dasummonplayer:
+    description: Summons dragon above player
+    usage: /dasummonplayer <type> <player>
+    permission: dragonattack.dasummonplayer
+    permission-message: You don't have permission to use this command!
+  dasummonloc:
+    description: Summons dragon to coordinates
+    usage: /dasummonloc <type> <x> <y> <z>
+    permission: dragonattack.dasummonloc
+    permission-message: You don't have permission to use this command!
+  dakill:
+    description: Kills all dragons
+    usage: /dakill
+    permission: dragonattack.dakill
+    permission-message: You don't have permission to use this command!
+permissions:
+    dragonattack.*:
+      description: Give access to all commands
+      children:
+        dragonattack.dasummonloc: true
+        dragonattack.dasummonplayer: true
+        dragonattack.dakill: true
+    dragonattack.dasummonloc:
+      description: Allows you to summon dragon to coordinates!
+      default: op
+    dragonattack.dasummonplayer:
+      description: Allows you to summon dragon to player!
+      default: op
+    dragonattack.dakill:
+      description: Allows you to kill all dragons!
+      default: op

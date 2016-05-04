@@ -1,0 +1,41 @@
+# world-name: Name of the world where dragons will spawn
+# spawn-height: Height (Y) at which dragons spawn
+# spawn-range: Distance away from players that dragons will be when they spawn
+# follow-range: Modifies the follow range of the dragon. If dragons wander, increase this value.
+# wait-time: Number of minutes between attempting to spawn dragons
+# cluster-size: Number of players to be considered a valid cluster for spawning
+# cluster search radius: How close players need to be to be considered a cluster
+#  
+# drop-egg-chance: Chance of egg dropping upon dragon death (between 0 and 1)
+# drop-loot-chance: Chance of single random loot dropping upon dragon death (between 0 and 1)
+#  
+# enable-compass-tracking: True if tracking via compass is enabled  
+# cost-material: Material cost of tracking dragon
+# cost-count: Number of materials required to track dragon
+#  
+# time-last-spawn: Time since last spawn. DO NOT ADJUST THIS VALUE MANUALLY.
+#  
+# Add locations in the format:
+# locations:
+#   - Center of the World, 0, 0
+#   - Another Example, -123, 321
+time-last-spawn: 0
+spawn-rules:
+  world-name: world
+  spawn-height: 150
+  spawn-range: 150
+  follow-range: 512
+  wait-time: 4320
+  cluster-size: 3
+  cluster-search-radius: 100
+drop-egg-chance: 0.0
+drop-loot-chance: 1.0
+tracking:
+  enable-compass-tracking: true
+  cost-material: GLOWSTONE_DUST
+  cost-count: 4
+custom-loot:
+  Custom Bow:
+    material: BOW
+    enchantments:
+      - ARROW_DAMAGE/3
